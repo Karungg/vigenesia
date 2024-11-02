@@ -36,12 +36,6 @@ class _RegisterState extends State<Register> {
                   ),
                   const SizedBox(height: 24),
                   TextFormField(
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your name';
-                      }
-                      return null;
-                    },
                     decoration: const InputDecoration(
                       labelText: 'Nama',
                       hintText: 'Enter your name',
@@ -50,12 +44,6 @@ class _RegisterState extends State<Register> {
                   ),
                   const SizedBox(height: 24),
                   TextFormField(
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your name';
-                      }
-                      return null;
-                    },
                     decoration: const InputDecoration(
                       labelText: 'Profesi',
                       hintText: 'Enter your name',
@@ -64,18 +52,6 @@ class _RegisterState extends State<Register> {
                   ),
                   const SizedBox(height: 16),
                   TextFormField(
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your email';
-                      }
-                      bool emailValid = RegExp(
-                              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                          .hasMatch(value);
-                      if (!emailValid) {
-                        return 'Please enter a valid email';
-                      }
-                      return null;
-                    },
                     decoration: const InputDecoration(
                       labelText: 'Email',
                       hintText: 'Enter your email',
@@ -84,15 +60,6 @@ class _RegisterState extends State<Register> {
                   ),
                   const SizedBox(height: 16),
                   TextFormField(
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter your password';
-                      }
-                      if (value.length < 6) {
-                        return 'Password must be at least 6 characters';
-                      }
-                      return null;
-                    },
                     obscureText: !_isPasswordVisible,
                     decoration: const InputDecoration(
                       labelText: 'Password',
